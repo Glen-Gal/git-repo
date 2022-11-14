@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Montserratt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Student Form</title>
+  </head>
+  <body>
+    <section class="form">
+      <div class="logo">
+        <img
+          src="https://www.gcit.edu.bt/2022/wp-content/uploads/sites/3/2021/12/footer_logo.png"
+          alt=""
+        />
+      </div>
+      <div class="container1">
+        <h3>Student Detail Entry</h3>
+        <form
+          action="/"
+          method="get"
+          onsubmit="event.preventDefault();onFormSubmit();"
+          autocomplete="off"
+        >
+          <div class="row">
+            <label>Student ID : </label>
+            <input
+              type="text"
+              id="id"
+              name="stdid"
+              placeholder="SOC12345678"
+              maxlength="11"
+              minlength="11"
+              pattern="[S]{1}[O]{1}[C]{1}[0-9]{8}"
+              onkeydown="upperCaseF(this)"
+            />
+            <small></small>
+          </div>
+          <div class="row">
+            <label for="name"> Student Name : </label>
+            <input
+              type="text"
+              id="name"
+              name="stdtname"
+              placeholder="STUDENT NAME"
+            />
+            <small></small>
+          </div>
+
+          <div><input type="submit" value="ADD" id="submit-btn" /></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="table">
+      <div class="container2 list">
+        <h3>Student List</h3>
+        <table id="stdList">
+          <thead>
+            <tr>
+              <th>Std_ID</th>
+              <th>Std_Name</th>
+              <th class="edit"></th>
+              <th class="delete"></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

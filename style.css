@@ -1,0 +1,209 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: "Montserrat", sans-serif;
+}
+:root {
+  --primaryColor: #bae2db;
+  --black: #000000;
+}
+body {
+  background-color: #eeedf2;
+  min-height: 200vh;
+}
+
+.form {
+  width: 40em;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-top: 10%;
+  padding: 20px;
+  position: relative;
+}
+.form .logo {
+  width: 5em;
+  height: 5em;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+
+  background-color: var(--black);
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  justify-content: right;
+  align-items: center;
+
+  border-radius: 20px;
+}
+.logo img {
+  width: 90%;
+}
+
+.container1 {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  padding: 15px;
+}
+.container1 h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.row {
+  margin-top: 2em;
+}
+
+input {
+  width: 78%;
+  margin-top: 2%;
+  padding: 0.7em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: 0.1s ease-in-out;
+}
+input:focus {
+  width: 80%;
+  scale: 101%;
+  transition: 0.1s ease-in-out;
+}
+#submit-btn {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 18%;
+  margin-top: 10%;
+  background-color: var(--black);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  float: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#submit-btn:hover {
+  color: #c0c0c0;
+  width: 19%;
+  transition: 0.1s ease-in-out;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .row:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
+#button-1 {
+  background-color: #b11a21;
+  padding-right: 10px;
+}
+#button-2 {
+  background-color: rgb(90, 241, 44);
+  padding-right: 10px;
+}
+
+/*------------- Table Design ----------------*/
+
+table {
+  border-collapse: collapse;
+}
+
+.table {
+  width: 90%;
+  margin: auto;
+  margin-top: 5%;
+  background-color: #ffffff;
+}
+.list {
+  width: 90%;
+  margin: auto;
+  padding: 15px;
+  margin-top: 5%;
+}
+.list h3 {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+td {
+  border: 1px solid #dddddd;
+  padding: 0.5em 2em;
+}
+.hide {
+  display: none;
+}
+a {
+  cursor: pointer;
+}
+a.editBTN {
+  color: #007bff;
+}
+a.deleteBTN {
+  color: #c1362f;
+}
+#stdList {
+  margin-bottom: 5%;
+}
+
+/*----------------- Validation ----------------*/
+
+.hide {
+  display: none;
+}
+
+/* Error */
+.row.error input {
+  border-color: #e2363f;
+}
+
+.row small {
+  color: #b00020;
+}
+
+/* Success */
+.row.success input {
+  border-color: #99d161;
+}
+
+/* Responsive layout - when screen size is 1100 at max*/
+@media screen and (max-width: 1100px) {
+  .container1 {
+    margin-top: 0;
+  }
+}
+/* Responsive layout - when screen size is 800 at max*/
+@media screen and (max-width: 800px) {
+  .form {
+    width: 80%;
+  }
+  .container1 {
+    margin-top: 0;
+  }
+}
+
+/* Logo Designs */
+@media screen and (max-width: 666px) {
+  .form .logo {
+    width: 4em;
+    height: 4em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .form .logo {
+    display: none;
+  }
+}
+
+
